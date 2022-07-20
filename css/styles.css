@@ -17,6 +17,7 @@
   --mail-tel-color: rgba(255, 255, 255, 0.6);
   --line-header-color: #ececec;
   --card-item-border: #eeeeee;
+  --hero-button-hover: #188ce8;
 }
 .container {
   width: 1200px;
@@ -167,7 +168,20 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--footer-color);
+  background-color: var(--logo-black-color);
   text-align: center;
+}
+
+.hero-overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.1)),
+    url('../images/overlay.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -200,6 +214,11 @@ img {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-hover);
 }
 
 /* ========= FEATURES ======== */
@@ -295,11 +314,13 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .filter-button:hover,
 .filter-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-button.current {
@@ -316,6 +337,10 @@ img {
 }
 .card-item {
   flex-basis: calc((100% - 60px) / 3);
+}
+.card-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-content {
   padding: 20px 24px;
