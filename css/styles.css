@@ -19,6 +19,7 @@
   --card-item-border: #eeeeee;
   --hero-button-hover: #188ce8;
   --hero-bg: #c4c4c4;
+  --clients-border: #afb1b8;
 }
 .container {
   width: 1200px;
@@ -244,6 +245,17 @@ img {
 .features-list .item {
   width: 270px;
 }
+.features-rectangle {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-gray-color);
+}
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
 .features-subtitle {
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -271,7 +283,7 @@ img {
   display: flex;
   column-gap: 30px;
 }
-.ourteam-list > .item {
+.ourteam-item {
   background-color: var(--primary-white-color);
   flex-basis: calc((100% - 90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -281,7 +293,7 @@ img {
 
 .ourteam-content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .ourteam-subtitle {
@@ -299,6 +311,67 @@ img {
   text-align: center;
 }
 
+.ourteam-iconlist {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+.ourteam-iconitem:not(:last-child) {
+  margin-right: 10px;
+}
+
+.ourteam-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  color: var(--clients-border);
+  border-radius: 50%;
+}
+
+.ourteam-icon {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  fill: currentColor;
+}
+
+.ourteam-link:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+/* ========== CLIENTS ========== */
+.clients-list {
+  display: flex;
+  column-gap: 30px;
+}
+.client-item {
+  flex-basis: calc((100% - 150px) / 6);
+}
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+
+  color: var(--clients-border);
+  border: 1px solid var(--clients-border);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
+}
 /* === styles portfolio.html === */
 
 .button-list {
