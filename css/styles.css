@@ -18,6 +18,7 @@
   --line-header-color: #ececec;
   --card-item-border: #eeeeee;
   --hero-button-hover: #188ce8;
+  --hero-bg: #c4c4c4;
 }
 .container {
   width: 1200px;
@@ -125,6 +126,8 @@ img {
 }
 .site-nav .link {
   display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -148,17 +151,27 @@ img {
 .contact-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-nav .link {
-  display: block;
+
+.contact-link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  align-items: center;
 }
-.contact-nav .link:hover,
-.contact-nav .link:focus {
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
+}
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* ===== styles index.html===== */
@@ -167,8 +180,7 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--footer-color);
-  background-color: var(--logo-black-color);
+  background-color: var(--hero-bg);
   text-align: center;
 }
 
