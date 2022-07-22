@@ -1,10 +1,3 @@
-/* белый цвет #FFFFFF */
-/* цвет основного  текста #757575 */
-/* вторичный цвет темного текста #212121  */
-/* акцент #2196F3 */
-/* вторичный цвет фона #F5F4FA */
-/* цвет footer #2F303A */
-
 /*=====COMPONENTS===== */
 :root {
   --primary-text-color: #757575;
@@ -20,6 +13,7 @@
   --hero-button-hover: #188ce8;
   --hero-bg: #c4c4c4;
   --clients-border: #afb1b8;
+  --footer-soclink: rgba(255, 255, 255, 0.1);
 }
 .container {
   width: 1200px;
@@ -183,16 +177,12 @@ img {
   padding-bottom: 200px;
   background-color: var(--hero-bg);
   text-align: center;
-}
-
-.hero-overlay {
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.1)),
+  background-image: linear-gradient(rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.1)),
     url('../images/overlay.jpg');
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -252,10 +242,7 @@ img {
   margin-bottom: 30px;
   background-color: var(--secondary-gray-color);
 }
-.features-icon {
-  width: 70px;
-  height: 70px;
-}
+
 .features-subtitle {
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -313,33 +300,28 @@ img {
 
 .ourteam-iconlist {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
   padding-bottom: 30px;
   justify-content: center;
-}
-
-.ourteam-iconitem:not(:last-child) {
-  margin-right: 10px;
+  column-gap: 10px;
 }
 
 .ourteam-link {
-  display: block;
+  display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  background-color: var(--primary-white-color);
   color: var(--clients-border);
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .ourteam-icon {
-  width: 20px;
-  height: 20px;
-  background-position: center;
   fill: currentColor;
 }
 
-.ourteam-link:hover {
+.ourteam-link:hover,
+.ourteam-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -363,14 +345,13 @@ img {
   padding: 16px 32px;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 .clients-icon {
   fill: currentColor;
-  width: 106px;
-  height: 60px;
 }
 /* === styles portfolio.html === */
 
@@ -448,6 +429,12 @@ img {
 }
 
 /* ===== FOOTER ==== */
+.footer-container {
+  display: flex;
+}
+.footer-contact {
+  margin-right: 70px;
+}
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -491,4 +478,41 @@ img {
 .mailtel-link:hover,
 .mailtel-link:focus {
   color: var(--accent-color);
+}
+.footer-soclinks {
+  padding-top: 12px;
+}
+
+.soclink-subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.footer-iconlist {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 10px;
+}
+
+.footer-soclink {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-color: var(--footer-soclink);
+  color: var(--primary-white-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-socicon {
+  fill: currentColor;
+}
+
+.footer-soclink:hover,
+.footer-soclink:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
