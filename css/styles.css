@@ -346,7 +346,6 @@ img {
   color: var(--clients-border);
   border: 1px solid var(--clients-border);
   border-radius: 4px;
-  padding: 16px 32px;
 }
 
 .clients-link:hover,
@@ -438,17 +437,18 @@ img {
 }
 
 /* ===== FOOTER ==== */
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-color);
+}
 .footer-container {
   display: flex;
 }
 .footer-contact {
   margin-right: 70px;
 }
-.page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--footer-color);
-}
+
 .logo-footer {
   color: var(--primary-white-color);
   font-family: 'Raleway';
